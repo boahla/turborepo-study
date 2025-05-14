@@ -1,17 +1,18 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+// import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/layouts/Header";
+import Header from "@/components/layouts/header";
+import Sidebar from "@/components/layouts/sidebar";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+// const geistSans = Geist({
+//   variable: "--font-geist-sans",
+//   subsets: ["latin"],
+// });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+// const geistMono = Geist_Mono({
+//   variable: "--font-geist-mono",
+//   subsets: ["latin"],
+// });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -26,10 +27,20 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      // className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Header />
-        <main>{children}</main>
+        <div className="h-screen flex flex-col">
+          {/* 상단 navigation */}
+          <Header />
+          <div className="flex flex-1 h-[calc(100vh-88px)]">
+            {/* 좌측 menu sidebar */}
+            <Sidebar />
+            {/* 컨텐츠 영역 */}
+            <main className="flex-1 overflow-auto py-[42px] px-[58px] bg-[#FBFCFC]">
+              {children}
+            </main>
+          </div>
+        </div>
       </body>
     </html>
   );
