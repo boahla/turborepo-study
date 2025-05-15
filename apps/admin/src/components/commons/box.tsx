@@ -17,7 +17,7 @@ export function Box({ children, className, borderColor = "subtle" }: BoxProps) {
   return (
     <div
       className={cn(
-        "bg-white rounded-md border p-4",
+        "bg-white rounded-[8px] border p-4",
         borderColorMap[borderColor],
         className
       )}
