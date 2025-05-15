@@ -3,7 +3,7 @@ import { z } from "zod";
 // 시험명 최대 길이
 export const SETTINGS_TITLE_MAX_LENGTH = 50;
 
-// 시험 만들기 유효성 검사
+// 시험 만들기 유효성
 export const schema = z.object({
   title: z
     .string()
