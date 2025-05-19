@@ -4,7 +4,7 @@ import Contents from "@/views/library/new/contents";
 export default function Home() {
   return (
     <div>
-      <MenuTitle title="문항 출제" className="mb-7" />
+      <MenuTitle title="문항 수정" className="mb-7" />
       <Contents />
     </div>
   );

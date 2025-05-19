@@ -7,6 +7,7 @@ export const ROUTES = {
   LIBRARY: {
     LIST: "/library/list",
     NEW: "/library/new",
+    EDIT: (id: number) => `/library/${id}/edit`,
   },
   SURVEY: {
     LIST: "/survey/list",
