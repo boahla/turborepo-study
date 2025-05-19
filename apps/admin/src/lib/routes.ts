@@ -2,7 +2,7 @@ export const ROUTES = {
   HOME: "/",
   EXAM: {
     LIST: "/exam/list",
-    NEW: "/exam/new",
+    // NEW: "/exam/new",
   },
   LIBRARY: {
     LIST: "/library/list",
