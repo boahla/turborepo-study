@@ -37,7 +37,7 @@ export default function RootLayout({
             <Sidebar />
             {/* 컨텐츠 영역 */}
             <main className="flex-1 overflow-auto py-[42px] px-[58px] bg-[#FBFCFC]">
-              {children}
+              <div className="max-w-screen-xl">{children}</div>
             </main>
           </div>
         </div>
