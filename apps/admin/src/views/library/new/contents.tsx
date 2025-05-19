@@ -20,8 +20,8 @@ const Contents = () => {
     <FormProvider {...methods}>
       <form onSubmit={methods.handleSubmit(onSubmit)}>
         <Settings />
-        <Exam />
       </form>
+      <Exam />
     </FormProvider>
   );
 };

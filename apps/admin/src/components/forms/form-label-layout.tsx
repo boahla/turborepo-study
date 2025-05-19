@@ -8,17 +8,24 @@ const FormLabelLayout = ({
   popover,
   children,
   className,
+  labelClassName,
 }: {
   label: string;
   required?: boolean;
   popover?: string;
-  children: ReactNode;
+  children?: ReactNode;
   className?: string;
+  labelClassName?: string;
 }) => {
   return (
     <div className={cn("flex flex-col gap-2", className)}>
-      <Label label={label} required={required} popover={popover} />
-      <div>{children}</div>
+      <Label
+        label={label}
+        required={required}
+        popover={popover}
+        className={labelClassName}
+      />
+      {children && <div>{children}</div>}
     </div>
   );
 };
